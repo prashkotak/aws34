@@ -1,0 +1,10 @@
+from datetime import datetime, timedelta
+
+def date_generator():
+  from_date = datetime.datetime.today()
+  while True:
+    yield from_date
+    from_date = from_date - datetime.timedelta(days=1)
+    return from_date
+
+print(date_generator())
